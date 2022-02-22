@@ -1,0 +1,170 @@
+body{
+	background-color: #102640;
+	font-family: 'Montserrat', sans-serif;
+  	overflow-y: scroll; 
+  	overflow-x: hidden;
+	color: white;
+	height: 100%;
+
+}
+div{
+	background-color: #123155;
+	box-shadow: 0 3 6 #000000;
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+
+}
+
+/*------------------------------------------------------------*/
+
+/*Phone*/
+.sections{
+	margin-top: 1%;
+	margin-left: 1%;
+	width: 95%;
+	height: 400px;
+}
+
+.image{
+	margin: 10%;
+	width:  90%;
+}
+h1,h2,h3{
+	position: absolute;
+	text-align: center;
+	margin: 5%;
+}
+
+h3{
+	font-weight: 400;
+	margin-top: 275px;
+}
+
+
+
+#Time{
+	margin-top: 300px;
+
+}
+
+/*End Phone*/
+
+/*------------------------------------------------------------*/
+
+/*Tablet*/
+@media only screen and (min-width: 600px) {
+.sections{
+	margin-top: 1%;
+	margin-left: 1%;
+	width: 95%;
+	height: 450px;
+}
+
+.image{
+	margin: 10%;
+	width:  90%;
+}
+
+h1,h2,h3{
+	position: absolute;
+	text-align: center;
+	margin: 5%;
+}
+
+h3{
+	font-weight: 400;
+	margin-top: 275px;
+}
+
+}
+
+/*End Tablet*/
+
+/*------------------------------------------------------------*/
+
+/* Small desktop*/
+
+@media only screen and (min-width: 992px) {
+
+.sections{
+	margin-top: 1%;
+	margin-left: 1%;
+	width: 31%;
+	height: 290px;
+	float:  left;
+
+}
+
+#distance{
+	width: 95%;
+	height: 450px;
+}
+
+
+.image{
+	margin: 10%;
+	width: 90%;
+}
+
+h1,h2,h3{
+	position: absolute;
+	text-align: center;
+	margin: 1%;
+}
+
+h3{
+	font-weight: 400;
+	margin-top: 275px;
+}
+
+}
+/* End Small desktop */
+
+/*------------------------------------------------------------*/
+
+/*Desktop*/
+@media only screen and (min-width: 1200px) {
+.sections{
+	margin-top: 1%;
+	margin-left: 1%;
+	width: 31%;
+	height: 450px;
+	float:  left;
+
+}
+#distance{
+	width: 95%;
+	height: 450px;
+
+}
+
+
+.image{
+	margin: auto;
+	width:  90%;
+}
+
+
+h1,h2,h3{
+	position: absolute;
+	text-align: center;
+	margin: 1%;
+}
+
+h3{
+	font-weight: 400;
+	margin-top: 275px;
+}
+
+
+}
+/*End Desktop*/
+
+
+	
+
+
+
+
+
