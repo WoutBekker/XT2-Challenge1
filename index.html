@@ -18,21 +18,111 @@
 				<h1 id="Time"> 5 Months 12 Days 17 Hours </h1>
 			</div>
 
-			<div class="sections" >
-				<h2> Spacecraft Information </h2>
-				<img class="image" src="images/Speed.svg"/>
+			<div class="sections" id="1" >
+
+				
 			</div>
 
-			<div class="sections" >
-				<h2> Supplies </h2>
-				<img class="image" src="images/supplies.svg"/>
+			<div class="sections" id="2">
+				
+				
 			</div>
 
-			<div class="sections" >
-				<h2> Food </h2>
-				<img class="image" src="images/food.svg"/>
+			<div class="sections" id="3">
+			
+				
 			</div>
 		</div>
-		
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+			<script type="text/javascript">
+
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawFoodChart);
+			google.charts.setOnLoadCallback(drawSuppliesChart);
+			google.charts.setOnLoadCallback(drawInfoChart);
+
+
+			function drawFoodChart() {
+			  var data1 = new google.visualization.arrayToDataTable([
+			  ['Food', 'Million'],
+			  ['Fruits', 5.6],
+			  ['Meats', 5.4],
+			  ['Grains', 5.8],
+			  ['Vegtables', 9.7]
+			]);
+
+
+	        var options1 = {'title':'Food on board', 
+	        				'width': 300, 'height':250, 
+	        				'backgroundColor': "#123155", 
+	        				'chartArea': {'width': '100%'}, 
+	        				'colors': ['#15683C', '#069448', '#14845E', '#13B17B'],
+	        				'titleTextStyle':{color: '#ffffff', fontSize: 20},
+	        				'legendTextStyle': {color: '#ffffff', fontSize: 15}
+
+	        				
+	        			}
+	        
+
+
+			  var food = new google.visualization.PieChart(document.getElementById('3'));
+			  food.draw(data1, options1);
+				}
+
+//------------------------------------------------------------------//
+
+			function drawSuppliesChart() {
+			  var data2 = new google.visualization.arrayToDataTable([
+			  ['Supplies', 'Million', {role: 'style'} ],
+			  ['Water', 7.1, '#000000'],
+			  ['Oxygen', 7.9, '#15E7F6'],
+			  ['Fuel', 6.8, '#0E55CF']
+			]);
+
+
+	        var options2 = {'title':'Supplies on board', 
+	        				'width': 300, 'height':250, 
+	        				'legend': { position: 'none' },
+	        				'chartArea': {'width': '75%'},
+	        				'backgroundColor': "#123155",  
+	        				'titleTextStyle':{color: '#ffffff', fontSize: 20},
+	        				'legendTextStyle': {color: '#ffffff', fontSize: 15}
+
+	        				
+	        			}
+	        
+
+
+			  var supplies = new google.visualization.BarChart(document.getElementById('2'));
+			  supplies.draw(data2, options2);
+			}
+
+//------------------------------------------------------------------//
+
+			function drawInfoChart() {
+			  var data3 = new google.visualization.arrayToDataTable([
+			  ['Time', 'Distance from Earth(in millions of KM)' ],
+			  ['1 month', 30],
+			  ['2 months', 35],
+			  ['3 months', 40],
+			  ['4 months', 45],			  
+			]);
+
+	        var options3 = {'title': 'Distance traveled by spacecraft',
+	        				'width': 300, 'height':250, 
+	        				'legend': { position: 'bottom' },
+	        				'chartArea': {'width': '75%'},
+	        				'legendTextStyle': {color: '#ffffff', fontSize: 10},
+	        				'backgroundColor': "#123155",  
+	        				'titleTextStyle':{color: '#ffffff', fontSize: 20}
+
+	        				
+	        			}
+
+			  var info = new google.visualization.LineChart(document.getElementById('1'));
+			  info.draw(data3, options3);
+			}
+			</script>
 	</body>
 </html>
